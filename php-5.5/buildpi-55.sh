@@ -2,7 +2,8 @@
 #-------> origin: https://nicolas.steinmetz.fr/blog/post/PHP-5.5.17-(dotdeb)-pour-cubietruck-(armhf)
 
 #----> Add DotDeb to repo sources and DotDeb key
-echo "deb-src all wheezy http://packages.dotdeb.org\ndeb-src-http://packages.dotdeb.org wheezy php55 all" > /etc/apt/sources.list.d/dotdeb.list
+echo "deb-src http://packages.dotdeb.org wheezy all\ndeb-src http://packages.dotdeb.org wheezy-php55 all" > /etc/apt/sources.list.d/dotdeb.list
+
 wget http://www.dotdeb.org/dotdeb.gpg -O - | apt-key add -
 
 #----> Update, upgrade repo and prepare build environment
